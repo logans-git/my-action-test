@@ -1,14 +1,15 @@
-name: My First Action
+name: Assignment Workflow
 
 on:
   push:
+  workflow_dispatch:
 
 jobs:
-  test:
+  check:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: 24f3002267@ds.study.iitm.ac.in
-        run: echo "Hello from my workflow!"
+        run: echo "This step contains my email address."
